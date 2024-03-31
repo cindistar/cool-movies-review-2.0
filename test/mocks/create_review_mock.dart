@@ -29,8 +29,7 @@ class CreateReviewMock {
         userReviewerId: "",
       );
 
-      
- static toMap() {
+  static toMap() {
     return <String, dynamic>{
       'idModel': createReviewModel.idModel,
       'titleModel': createReviewModel.titleModel,

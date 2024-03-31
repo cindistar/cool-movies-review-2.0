@@ -19,8 +19,7 @@ void main() {
   ReviewEntity review = ReviewMock.reviewEntity;
   String reviewId = review.id;
 
-  DeleteReviewParams params =
-      DeleteReviewParams(reviewId: reviewId);
+  DeleteReviewParams params = DeleteReviewParams(reviewId: reviewId);
 
   setUp(() async {
     usecase = MockDeleteReviewUsecase();
@@ -36,8 +35,7 @@ void main() {
       );
     },
     build: () => deleteReviewBloc,
-    act: (bloc) =>
-        bloc.add(DeleteReview(reviewId: reviewId)),
+    act: (bloc) => bloc.add(DeleteReview(reviewId: reviewId)),
     expect: () => const <DeleteReviewState>[
       DeleteReviewState(status: StatusEnum.loading),
       DeleteReviewState(status: StatusEnum.success, isReviewDeleted: true)
@@ -52,8 +50,7 @@ void main() {
       );
     },
     build: () => deleteReviewBloc,
-    act: (bloc) =>
-        bloc.add(DeleteReview(reviewId: reviewId)),
+    act: (bloc) => bloc.add(DeleteReview(reviewId: reviewId)),
     expect: () => const <DeleteReviewState>[
       DeleteReviewState(status: StatusEnum.loading),
       DeleteReviewState(status: StatusEnum.failure, isReviewDeleted: false)

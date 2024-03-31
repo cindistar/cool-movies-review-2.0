@@ -53,7 +53,8 @@ void main() {
 
       when(() => mockDatasource.createReview(
               createReviewEntity: createReviewEmpty))
-          .thenThrow(const CreateReviewException(message: "Review creation failed"));
+          .thenThrow(
+              const CreateReviewException(message: "Review creation failed"));
 
       // act
       final result =
@@ -85,8 +86,8 @@ void main() {
       when(() => mockDatasource.deleteReview(reviewId: reviewId))
           .thenAnswer((_) async => false);
 
-      when(() => mockDatasource.deleteReview(reviewId: ""))
-          .thenThrow(const DeleteReviewException(message: "Review deletion failed"));
+      when(() => mockDatasource.deleteReview(reviewId: "")).thenThrow(
+          const DeleteReviewException(message: "Review deletion failed"));
 
       // act
       final result = await repository.deleteReview(reviewId: reviewId);

@@ -8,14 +8,12 @@ void main() {
   ReviewEntity review = ReviewMock.reviewEntity;
   String reviewId = review.id;
 
-   test('verify DeleteReview is DeleteReviewEvent', () {
-    expect(DeleteReview(reviewId: reviewId),
-        isA<DeleteReviewEvent>());
+  test('verify DeleteReview is DeleteReviewEvent', () {
+    expect(DeleteReview(reviewId: reviewId), isA<DeleteReviewEvent>());
   });
 
   test('verify DeleteReview is equal to Equatable props', () {
-    DeleteReview instance =
-       DeleteReview(reviewId: reviewId);
+    DeleteReview instance = DeleteReview(reviewId: reviewId);
     expect(instance.props.isNotEmpty, true);
   });
 }

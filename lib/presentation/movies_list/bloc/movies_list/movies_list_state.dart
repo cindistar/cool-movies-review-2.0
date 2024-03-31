@@ -1,5 +1,3 @@
-
-
 import 'package:coolmovies/core/util/status_enum.dart';
 import 'package:coolmovies/domain/entities/movies/movies_entity.dart';
 import 'package:equatable/equatable.dart';

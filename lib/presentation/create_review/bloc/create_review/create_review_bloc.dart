@@ -26,7 +26,6 @@ class CreateReviewBloc extends Bloc<CreateReviewEvent, CreateReviewState> {
         createReviewEntity: event.createReviewEntity,
       ),
     );
-    
 
     failureOrSuccess.fold(
         (failure) => emit(state.copyWith(

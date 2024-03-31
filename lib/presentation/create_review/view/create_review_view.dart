@@ -161,7 +161,7 @@ class _CreateReviewViewState extends State<CreateReviewView>
                         final body = _bodyController.text;
                         final rating = _ratingController.text;
                         final moveId = _movieIdController.text;
-                        final userReviewer = _userReviewerIdController.text; 
+                        final userReviewer = _userReviewerIdController.text;
 
                         final newReview = CreateReviewEntity(
                           id: id,

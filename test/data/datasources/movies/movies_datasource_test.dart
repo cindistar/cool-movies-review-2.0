@@ -52,8 +52,7 @@ void main() {
       expect(result, isA<List<MoviesModel>>());
     });
 
-    test('failure - should throw a all movies list exception',
-        () async {
+    test('failure - should throw a all movies list exception', () async {
       // arrange
       var queryResult = QueryResult(
           source: QueryResultSource.network,

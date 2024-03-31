@@ -5,7 +5,6 @@ sealed class ReviewsListEvent extends Equatable {
 }
 
 class GetReviewsList extends ReviewsListEvent {
-
   @override
   List<Object> get props => [];
 }
