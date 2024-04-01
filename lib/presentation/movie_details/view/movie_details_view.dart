@@ -40,7 +40,7 @@ class _MoviesDetailsViewState extends State<MoviesDetailsView>
       bloc: _deleteReviewBloc,
       listener: (context, state) {
         if (state.status == StatusEnum.success) {
-          //_reviewsListBloc.add(GetReviewsList());
+          _reviewsListBloc.add(GetReviewsList());
           showSnackbarCreateReviewSuccess(
             context,
             MovieWords.reviewDeletedSuccess,
